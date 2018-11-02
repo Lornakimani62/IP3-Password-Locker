@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
         '''
         This method runs before each test case 
         '''
-        self.add_User = User("Lornakimani","kimanilorna@yahoo.com","psd123")
+        self.new_User = User("Lornakimani","kimanilorna@yahoo.com","psd123")
     def tearDown(self):
         '''
         This method cleans up after each case 
@@ -26,9 +26,16 @@ class TestUser(unittest.TestCase):
         '''
          This test case is to test if the object is intiniated properly 
         '''
-        self.assertEqual(self.add_User.username,"Lornakimani")
-        self.assertEqual(self.add_User.email,"kimanilorna@yahoo.com")
-        self.assertEqual(self.add_User.password,"psd123")
+        self.assertEqual(self.new_User.username,"Lornakimani")
+        self.assertEqual(self.new_User.email,"kimanilorna@yahoo.com")
+        self.assertEqual(self.new_User.password,"psd123")
+
+    def test_add_user (self):
+        '''
+        This to test whether a user has been added to the users array
+        '''
+        self.new_User.add_user()
+        self.assertEqual(len(User.Users),1)
 
 if __name__ == '__main__':
     unittest.main()
