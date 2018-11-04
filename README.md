@@ -23,7 +23,7 @@ Users can create a new account, input their password and exit the application us
 users can create accounts for which they want their passowrds stored. 
 They can then view the credentials, copy the password. 
 
-#Prerequiites
+# Prerequiites
 - Python 3.6 required
 #Set-up and Installation
 1. Clone or download the Repo
