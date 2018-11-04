@@ -33,7 +33,7 @@ They can then view the credentials, copy the password.
 2. Install python 3.6
 3. Run `python3.6 run.py` on your terminal
 
-#Known bugs
+# Known bugs
 The copy email module is not responding as expected
 
 #Technologies Used
