@@ -26,6 +26,7 @@ They can then view the credentials, copy the password.
 # Prerequiites
 
 - Python 3.6 required
+
 #Set-up and Installation
 1. Clone or download the Repo
 2. Install python 3.6
