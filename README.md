@@ -1,7 +1,7 @@
 # PasswordLocker
 This is the third Independent project for Moringa Core.
 
-#Author
+# Author
 
 Lorna Kimani
 
