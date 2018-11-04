@@ -1,3 +1,6 @@
+import pyperclip
+from credentials import Credential
+
 class User:
 
     """
@@ -60,6 +63,11 @@ class User:
         method that returns the user list
         '''
         return cls.Users
+    
+    @classmethod
+    def copy_email(cls,string,secret):
+        found_user = User.find_user(string,secret)
+        pyperclip.copy(found_user.email)
 
     
     

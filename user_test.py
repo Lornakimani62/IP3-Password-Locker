@@ -1,4 +1,5 @@
 import unittest
+import pyperclip
 from user import User
 
 class TestUser(unittest.TestCase):
@@ -51,12 +52,12 @@ class TestUser(unittest.TestCase):
         Test to see if other users can be found 
         '''
         self.new_User.add_user()
-        multiple_user= User("ian","tuukuoian@yahoo.com","psd123")
-        multiple_user.add_user()
+        test_user= User("ian","tuukuoian@yahoo.com","psd123")
+        test_user.add_user()
 
         found_user=User.find_user("tuukuoian@yahoo.com","psd123")
 
-        self.assertEqual(found_user.username,multiple_user.username)
+        self.assertEqual(found_user.email,test_user.email)
 
     def test_user_exists (self):
 
@@ -78,7 +79,16 @@ class TestUser(unittest.TestCase):
         '''
 
         self.assertEqual(User.display_users(),User.Users)
+     
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found contact
+        '''
 
+        self.new_User.add_user()
+        User.copy_email("tuukuoian@yahoo.com","psd123")
+
+        self.assertEqual(self.new_User.email, pyperclip.paste())
 
 
 
