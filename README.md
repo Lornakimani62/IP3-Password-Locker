@@ -24,6 +24,7 @@ users can create accounts for which they want their passowrds stored.
 They can then view the credentials, copy the password. 
 
 # Prerequiites
+
 - Python 3.6 required
 #Set-up and Installation
 1. Clone or download the Repo
