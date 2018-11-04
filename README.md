@@ -36,5 +36,5 @@ They can then view the credentials, copy the password.
 # Known bugs
 The copy email module is not responding as expected
 
-#Technologies Used
+# Technologies Used
 Built using Python 3.6
