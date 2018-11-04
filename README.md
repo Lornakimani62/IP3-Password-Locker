@@ -11,6 +11,7 @@ Password Locker is an application that helps users generate and store passwords 
 # Features
 
 Users can create a new account, input their password and exit the application using the following short codes:
+
 <ul>
 <li>cu - Creates new account creadential</li>
 <li>du - display users</li>
