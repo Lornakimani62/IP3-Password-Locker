@@ -27,7 +27,7 @@ They can then view the credentials, copy the password.
 
 - Python 3.6 required
 
-#Set-up and Installation
+# Set-up and Installation
 1. Clone or download the Repo
 2. Install python 3.6
 3. Run `python3.6 run.py` on your terminal
