@@ -5,7 +5,7 @@ This is the third Independent project for Moringa Core.
 
 Lorna Kimani
 
-#Description
+# Description
 Password Locker is an application that helps users generate and store passwords on their multiple accounts. The password locker runs as a terminal application and uses short codes to navigate through it.
 
 #Features
