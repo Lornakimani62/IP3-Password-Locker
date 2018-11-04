@@ -20,7 +20,7 @@ class TestUser(unittest.TestCase):
         '''
         This method cleans up after each case 
         '''
-        User.users=[]
+        User.Users=[]
 
     def test_init(self):
         '''
@@ -36,6 +36,44 @@ class TestUser(unittest.TestCase):
         '''
         self.new_User.add_user()
         self.assertEqual(len(User.Users),1)
+
+    def test_save_multiple_users(self):
+        '''
+        Test to see if we can add multiple contacts
+        '''
+        self.new_User.add_user()
+        multiple_user= User("ian","tuukuoian@yahoo.com","psd123")
+        multiple_user.add_user()
+        self.assertEqual(len(User.Users),2)
+
+    def test_find_user(self):
+        '''
+        Test to see if other users can be found 
+        '''
+        self.new_User.add_user()
+        multiple_user= User("ian","tuukuoian@yahoo.com","psd123")
+        multiple_user.add_user()
+
+        found_user=User.find_user("tuukuoian@yahoo.com","psd123")
+
+        self.assertEqual(found_user.username,multiple_user.username)
+
+    def test_user_exists (self):
+
+        '''
+        test to see if we can find a user
+        '''
+
+        self.new_User.add_user()
+        multiple_user= User("ian","tuukuoian@yahoo.com","psd123")
+        multiple_user.add_user()
+
+        user_exists = User.user_exists("ian")
+
+        self.assertTrue(user_exists)
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

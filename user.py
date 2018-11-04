@@ -23,5 +23,34 @@ class User:
         '''
 
         User.Users.append(self)
+
+    @classmethod
+    def find_user(cls,string,secret):
+        '''
+        Method that takes in a string and returns a user that matches that string
+        Agrs:
+            string: username to search for 
+        Returns:
+            user with the same username
+        '''
+        for User in cls.Users:
+            if User.email == string and User.password == secret:
+
+                return User
+
+    @classmethod
+    def user_exists(cls,string):
+        '''
+        Method that checks if a user exists
+        Agrs:
+            string: username to search for 
+        Returns:
+            True or false depending on whether the user exists 
+        '''
+        for User in cls.Users:
+            if User.username == string:
+
+                return True
+
     
     
